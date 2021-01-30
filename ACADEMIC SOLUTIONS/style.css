@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #eb4d4a;
+    --secondary-color: #2e303d;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1 {font-size: 5rem;}
+h2 {font-size: 4rem;}
+h3 {font-size: 3.3rem;}
+h4 {font-size: 2.7rem;}
+p {font-size: 2.2rem;}
+
+a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: 0;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+button:focus {
+    outline: none;
+}
+
+.btn {
+    color: white;
+    background-color: var(--primary-color);
+    padding: 1.3rem 2.3rem;
+    border-radius: .6rem;
+    font-size: 1.8rem;
+    box-shadow: 0rem .5rem 1rem #00000050;
+    transition: all .2s;
+    font-weight: 500;
+}
+
+.btn-sec {
+    color: white;
+    background-color: var(--secondary-color);
+    padding: 1.3rem 2.3rem;
+    border-radius: .6rem;
+    font-size: 1.8rem;
+    box-shadow: 0rem .5rem 1rem #00000050;
+    transition: all .2s;
+    font-weight: 500;
+}
+
+.btn:hover, .btn-sec:hover {
+    transform: translateY(-.4rem);
+    box-shadow: 0rem 1rem 1.1rem #00000050;
+}
+
+.btn:active, .btn-sec:active {
+    transform: translateY(-.2rem);
+    box-shadow: 0rem .8rem 1.1rem #00000050;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0rem auto;
+}
+
+.full-container {
+    max-width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.my {
+    margin: 2rem 0rem;
+}
+
+
+
+/* NAVBAR */
+
+#nav {
+    position: absolute;
+    width: 100%;
+}
+
+#nav a {
+    color: white;
+}
+
+#nav i {
+    position: absolute;
+    top: 35%;
+    right: 4rem;
+    columns: var(--primary-color);
+    font-size: 4rem;
+    display: none;
+
+}
+
+#nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #aaa;
+}
+
+#nav img {
+    width: 10rem;
+    padding: 3rem 0rem;
+}
+
+#nav ul {
+    display: flex;
+    align-items: center;
+}
+
+#nav li {
+    padding: 1rem;
+}
+
+a {
+    transition: all .1s;
+}
+
+
+#nav a:hover {
+    border-bottom: 3px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+
+/* MOBILE NAVBAR */
+
+#mobile-nav {
+    width: 60vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    opacity: .9;
+    display: none;
+    transition: all .5s;
+    overflow-x: hidden;
+}
+
+#mobile-nav i {
+    position: absolute;
+    top: 4.8%;
+    right: 4rem;
+    color: var(--primary-color);
+    font-size: 4rem;
+}
+
+#mobile-nav .mobile-content {
+    display: flex;
+    margin-top: 15rem;
+    margin-left: 6rem;
+}
+
+#mobile-nav a {
+    color: white;
+    font-size: 2.8rem;
+    margin: 3rem 0rem;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+/* HERO SECTION */
+
+#hero .full-container {
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #09002bcc, #09002b99), url(imgs/hero.jpg);
+    background-size: cover;
+}
+
+
+#hero h1 {
+    color: #ddd;
+}
+
+#hero h4 {
+    color: #ccc;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+#hero .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* RECRUITMENT SECTION */
+
+#rec .full-container {
+    min-height: 30vh;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#rec .container {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rec-btns .btn-sec {
+    margin: 0rem .5rem;
+}
+
+#rec h1 {
+    color: white;
+}
+
+#rec .rec-btns {
+    display: block;
+    margin: 3rem auto;
+}
+
+
+/* LEADS START */
+
+#leads .container {
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 13rem;
+    color: var(--secondary-color);
+}
+
+.leads-1 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#leads h2 {
+    line-height: 1;
+}
+
+#leads h2, #leads p {
+    min-height: 5rem;
+    margin: 1rem 0rem;
+}
+
+#leads button {
+    margin: 3rem 0rem;
+}
+
+
+
+
+/* BOOK SECTION */
+
+#book .full-container {
+    min-height: 25vh;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+#book .container {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#book .btn {
+    display: block;
+    margin: 3rem auto;
+}
+
+#book h1, #book p {
+    color: white;
+}
+
+/* SUCCESS SECTION */
+
+#success .container {
+    min-height: 100vh;
+    padding: 5rem 0rem;
+    color: var(--secondary-color);
+}
+
+#success p {
+    letter-spacing: 2px;
+}
+
+#success img {
+    display: block;
+    width: 60%;
+    margin: 3rem auto;
+    box-shadow: 0px 1rem 1rem #00000050;
+}
+
+
+#success .success-cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4rem;
+    margin: 8rem 1rem;
+}
+
+#success .success-card {
+    padding: 1rem 2rem;
+    box-shadow: 0px 1rem 2rem #00000030;
+    transition: all .2s;
+}
+
+#success .success-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 1.6rem 2rem #00000050;
+}
+
+
+#success i {
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* FOOTER SECTION */
+
+#footer {
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    color: whites;
+}
+
+
+
+@media (max-width: 1250px) {
+    .container {
+        padding: 0rem 5rem;
+    }
+
+    html {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 900px) {
+    #leads .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        min-height: 50vh;
+    }
+
+    #success .success-cards {
+        grid-template-columns: 1fr;
+        margin: 8rem 0rem;
+    }
+
+    #nav ul {
+        display: none;
+    }
+
+    #nav i {
+        display: block;
+    }
+}
+
+
+@media (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+
+    #rec .btn-sec {
+        display: block;
+        margin: 3rem auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
